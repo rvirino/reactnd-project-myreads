@@ -1,5 +1,4 @@
 import React from 'react'
-import noCoverThumb from '../images/no_cover_thumb.gif';
 
 class Book extends React.Component {
     changeBookShelf = event => {
@@ -8,6 +7,7 @@ class Book extends React.Component {
 
     render() {
         const { book } = this.props;
+        const noCoverThumb = 'http://via.placeholder.com/128x188?text=No%20Cover';
         const bookCover = book.imageLinks ? book.imageLinks.thumbnail : noCoverThumb;
         const title = book.title ? book.title : 'No title available';
         const authors = book.authors ? book.authors.join(", ") : "Author Unknown";
